@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.6] - 2026-08-29
+
+### Changed
+
+- Upgrade dependencies (security fixes)
+
 ## [1.1.5] - 2025-04-13
 
 ### Changed
