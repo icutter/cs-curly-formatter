@@ -1,3 +1,4 @@
+// @ts-ignore - VS Code API is provided at runtime by the extension host.
 import * as vscode from 'vscode';
 
 /*
@@ -35,11 +36,11 @@ let cachedSettings: EditorSettings = getEditorSettings();
 export function activate(context: vscode.ExtensionContext) {
 
 	// Subscribe to the onDidChangeConfiguration event
-	const configChangeListener = vscode.workspace.onDidChangeConfiguration((event) => {
+	const configChangeListener = vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
 		if (event.affectsConfiguration(extensionName) || event.affectsConfiguration("editor")) {
 			cachedSettings = getEditorSettings();
 		}
-	  });
+	});
 	  
 	  context.subscriptions.push(configChangeListener);
 	
@@ -71,7 +72,7 @@ async function autoCompleteOrNewLine(editor: vscode.TextEditor) {
 			insertText = '\n' + indent;
 		}
 		
-		editor.edit(editBuilder => {
+		editor.edit((editBuilder: vscode.TextEditorEdit) => {
 			editBuilder.insert(editor.selection.active, insertText);
 		});
 	}

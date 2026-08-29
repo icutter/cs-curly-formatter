@@ -31,12 +31,16 @@
   	  	"configuration": {
   	  	  	"title": "Curly Formatter",
   	  	  	"properties": {
-                "cscurlyformatter.languages": {
-                    "description": "Languages to format",
-                    "type": "array",
-                    "items": "string",
-                    "default": ["c", "cpp", "csharp"]
-                }
+  	  	  	  	"cscurlyformatter.languages": {
+  	  	  	  	  	"description": "Languages to format",
+  	  	  	  	  	"type": "array",
+  	  	  	  	  	"items": "string",
+  	  	  	  	  	"default": [
+  	  	  	  	  	  	"c",
+  	  	  	  	  	  	"cpp",
+  	  	  	  	  	  	"csharp"
+  	  	  	  	  	]
+  	  	  	  	}
   	  	  	}
   	  	}
   	},
@@ -51,7 +55,7 @@
   	"devDependencies": {
   	  	"@types/glob": "^7.1.4",
   	  	"@types/mocha": "^9.0.0",
-  	  	"@types/node": "14.x",
+  	  	"@types/node": "^14.18.63",
   	  	"@types/vscode": "^1.62.0",
   	  	"@typescript-eslint/eslint-plugin": "^5.1.0",
   	  	"@typescript-eslint/parser": "^5.1.0",
